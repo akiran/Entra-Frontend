@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import { Query } from "react-apollo";
-import { perPage } from "../../config.js";
-import AnswerList from "../answer-list";
-import userAnswerQuery from "./answerListQuery.js";
-import Error from "./../ErrorMessage.js";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import React, { Component } from 'react';
+import { Query } from 'react-apollo';
+import { perPage } from '../../config.js';
+import AnswerList from '../answer-list';
+import userAnswerQuery from './answerListQuery.js';
+import Error from './../ErrorMessage.js';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class UserAnswers extends Component {
   handleName(answers) {
     if (answers[0] === undefined) {
-      return "";
+      return '';
     } else {
       return answers[0].answeredBy.name;
     }
@@ -23,7 +23,7 @@ class UserAnswers extends Component {
     }
   }
   render() {
-    const filter = "user";
+    const filter = 'user';
     const { page } = this.props;
     return (
       <Query
